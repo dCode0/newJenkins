@@ -4,6 +4,7 @@ pipeline{
   environment {
     PATH = "${PATH}:${getTerraformPath()}"
   }
+  
   stages{
     stage('terraform init'){
       steps{
@@ -12,7 +13,7 @@ pipeline{
 
     }
   }
-}
+
 
   stages{
     stage('terraform plan'){
