@@ -14,7 +14,7 @@ pipeline{
   }
 }
 
-stages{
+  stages{
     stage('terraform plan'){
       steps{
         sh "terraform plan"
@@ -22,9 +22,9 @@ stages{
 
     }
   }
-}
 
-stages{
+
+  stages{
     stage('terraform apply'){
       steps{
         sh "terraform apply -auto-approve"
@@ -32,9 +32,9 @@ stages{
 
     }
   }
-}
 
-stages{
+
+  stages{
     stage('terraform show'){
       steps{
         sh "terraform show"
